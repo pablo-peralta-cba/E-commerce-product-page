@@ -34,7 +34,7 @@ function App() {
       },
       {
         src: '/image-product-3.jpg',
-        thumbnail: 'src/images/image-product-3-thumbnail.jpg'
+        thumbnail: '/image-product-3-thumbnail.jpg'
       },
       {
         src: '/image-product-4.jpg',
