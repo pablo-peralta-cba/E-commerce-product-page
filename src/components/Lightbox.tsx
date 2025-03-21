@@ -58,7 +58,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
         </div>
         
         {/* Desktop Gallery */}
-        <div className="d-none d-md-block mx-2 py-3">
+        <div className="d-none d-md-block mx-2">
           <div 
             className="w-100 position-relative rounded-4 overflow-hidden cursor-pointer mb-4"
             style={{aspectRatio: '1/1' }}
@@ -71,11 +71,11 @@ const Lightbox = ({ images }: { images: Image[] }) => {
             />
           </div>
           
-          <div className="row row-cols-4  gx-3">
+          <div className="row row-cols-8 gx-0">
             {images.map((image, index) => (
               <div 
                 key={index} 
-                className={`col position-relative rounded-4 overflow-hidden cursor-pointer border-2 border-transparent thumbnail-image ${currentIndex === index ? 'selected' : ''}`}
+                className={`col position-relative rounded-4 overflow-hidden cursor-pointer m-1 border-2 border-transparent thumbnail-image ${currentIndex === index ? 'selected' : ''}`}
                 onClick={() => setCurrentIndex(index)}
               >
                 <div className="position-absolute top-0 start-0 w-100 h-100 bg-white overlay"></div>
@@ -84,7 +84,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
                   alt={`Thumbnail ${index + 1}`} 
                   width={88} 
                   height={88} 
-                  className="object-cover w-100 h-100"
+                  className="object-fit-cover w-100 h-100 rounded-4"
                 />
               </div>
             ))}
@@ -113,7 +113,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
       </div>
 
       <div className="position-relative mb-4" style={{ margin: 'auto' }}>
-        <div className="position-relative rounded-3 overflow-hidden" style={{ aspectRatio: '1/1' }}>
+        <div className="position-relative rounded-4 overflow-hidden" style={{ aspectRatio: '1/1' }}>
           <img
             src={images[currentIndex].src}
             alt={`Product image ${currentIndex + 1}`}
@@ -126,7 +126,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
           onClick={handlePrevious}
           aria-label="Previous image"
         >
-          <img src="src/images/icon-previous.svg" alt="Previous" width={12} height={18} />
+          <img src="/icon-previous.svg" alt="Previous" width={12} height={18} />
         </button>
 
         <button
@@ -138,11 +138,11 @@ const Lightbox = ({ images }: { images: Image[] }) => {
         </button>
       </div>
 
-      <div className="row row-cols-4 gx-3 px-3">
+      <div className="row row-cols-8 gx-0">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`col position-relative rounded-5 overflow-hidden cursor-pointer thumbnail-image ${currentIndex === index ? 'selected' : ''}`}
+            className={`col position-relative rounded-5 overflow-hidden m-1 cursor-pointer thumbnail-image ${currentIndex === index ? 'selected' : ''}`}
             onClick={() => setCurrentIndex(index)}
           >
             <div className="position-absolute top-0 start-0 w-100 h-100 bg-white overlay"></div>
