@@ -41,20 +41,20 @@ const Navbar: React.FC<NavbarProps> = ({ cartItems, setCartItems }) => {
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open menu"
           >
-            <img src="src/images/icon-menu.svg" alt="Menu" width={16} height={15} />
+            <img src="/icon-menu.svg" alt="Menu" width={16} height={15} />
           </button>
 
           <div className='brandName' >
         <a href="/">
-          <img src="src/images/logo.svg" alt="Sneakers" width={138} height={20} />
+          <img src="/logo.svg" alt="Sneakers" width={138} height={20} />
         </a>
       </div>
        
           <nav className="menu-header d-none d-md-flex align-items-center">
             <ul className="d-flex gap-3" style={{ height: '100%' }}>
               {["Collections", "Men", "Women", "About", "Contact"].map((item) => (
-                <li key={item} className="navItem" style={{ height: '100%', display: 'flex', alignItems: 'center', borderBottomWidth: '4px', borderColor: 'transparent', transition: 'border-color 0.3s ease-in-out' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'orange' }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent' }}>
-                  <a className='menuLink' href="#" style={{ color: 'darkgray', transition: 'color 0.3s ease-in-out' }} onMouseEnter={(e) => { e.currentTarget.style.color = 'black' }} onMouseLeave={(e) => { e.currentTarget.style.color = 'darkgray' }}>{item}</a>
+                <li key={item} className="navItem" onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'orange' }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent' }}>
+                  <a className='menuLink' href="#" onMouseEnter={(e) => { e.currentTarget.style.color = 'black' }} onMouseLeave={(e) => { e.currentTarget.style.color = 'darkgray' }}>{item}</a>
                 </li>
               ))}
             </ul>
@@ -69,18 +69,18 @@ const Navbar: React.FC<NavbarProps> = ({ cartItems, setCartItems }) => {
               aria-label="Toggle cart"
             >
               {cartItems.length > 0 && (
-                <span className="position-absolute top-0 end-0 bg-warning text-white small rounded-pill px-2 py-1" style={{ transform: 'translate(50%, -50%)' }}>
+                <span className="cart-qty position-absolute top-0 end-0 bg-warning text-white small rounded-pill px-2 py-1">
                   {cartItems.reduce((total, item) => total + item.quantity, 0)}
                 </span>
               )}
-              <img src="src/images/icon-cart.svg" alt="Cart" width={22} height={20} />
+              <img src="/icon-cart.svg" alt="Cart" width={22} height={20} />
             </button>
 
             {isCartOpen && <Cart cartItems={cartItems} setCartItems={setCartItems} />}
           </div>
 
           <button id='avatar' className="rounded-circle overflow-hidden avatar-button" onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'orange' }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent' }}>
-            <img src="src/images/image-avatar.png" alt="Avatar" className="w-100 h-100 object-cover" />
+            <img src="/image-avatar.png" alt="Avatar" className="w-100 h-100 object-cover" />
           </button>
         </div>
       </div>
@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ cartItems, setCartItems }) => {
               onClick={() => setIsMenuOpen(false)}
               aria-label="Close menu"
             >
-              <img src="src/images/icon-close.svg" alt="Close" width={14} height={15} />
+              <img src="/icon-close.svg" alt="Close" width={14} height={15} />
             </button>
 
             <ul className="d-flex flex-column gap-3 fw-bold menu-list">

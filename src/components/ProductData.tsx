@@ -104,7 +104,7 @@ const ProductData: React.FC<ProductDataProps> = ({ product, setCartItems }) => {
             onClick={decreaseQuantity}
             aria-label="Decrease quantity"
           >
-            <img src="src/images/icon-minus.svg" alt="Minus" width={12} height={4} />
+            <img src="/icon-minus.svg" alt="Minus" width={12} height={4} />
           </button>
 
           <span className="fw-bold">{quantity}</span>
@@ -114,7 +114,7 @@ const ProductData: React.FC<ProductDataProps> = ({ product, setCartItems }) => {
             onClick={increaseQuantity}
             aria-label="Increase quantity"
           >
-            <img src="src/images/icon-plus.svg" alt="Plus" width={12} height={12} />
+            <img src="/icon-plus.svg" alt="Plus" width={12} height={12} />
           </button>
         </div>
 

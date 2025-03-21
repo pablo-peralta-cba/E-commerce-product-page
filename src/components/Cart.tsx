@@ -52,7 +52,7 @@ interface Item {
                 aria-label="Remove from cart"
                 className="bg-transparent border-0 p-0"
               >
-                <img src="src/images/icon-delete.svg" alt="Delete" width={14} height={16} />
+                <img src="/icon-delete.svg" alt="Delete" width={14} height={16} />
               </button>
             </li>
           ))}

@@ -45,7 +45,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
             aria-label="Previous image"
             style={{ zIndex: 1 }} 
           >
-            <img src="src/images/icon-previous.svg" alt="Previous" width={12} height={18} />
+            <img src="/icon-previous.svg" alt="Previous" width={12} height={18} />
           </button>
           
           <button 
@@ -53,7 +53,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
             onClick={handleNext}
             aria-label="Next image"
           >
-            <img src="src/images/icon-next.svg" alt="Next" width={12} height={18} />
+            <img src="/icon-next.svg" alt="Next" width={12} height={18} />
           </button>
         </div>
         
@@ -103,7 +103,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
           className="lightbox-close"
         >
           <img
-            src="src/images/icon-close.svg"
+            src="/icon-close.svg"
             alt="Close"
             width={20}
             height={20}
@@ -134,7 +134,7 @@ const Lightbox = ({ images }: { images: Image[] }) => {
           onClick={handleNext}
           aria-label="Next image"
         >
-          <img src="src/images/icon-next.svg" alt="Next" width={12} height={18} />
+          <img src="/icon-next.svg" alt="Next" width={12} height={18} />
         </button>
       </div>
 
